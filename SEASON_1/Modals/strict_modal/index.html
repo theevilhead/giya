@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> Giyaletter : Modals </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div class="GY-container">
+	<div class="GY-container-wrap">
+	
+		<div class="container-wrap">
+			<button class="modal-trigger"> Click to open modal</button>
+			<h1>Strict modal</h1>
+			<p>
+			Strict modals. These can be used when the user has to complete some action to move further. Hence the modals do not close/hide when clicked on the blank space.
+			</p>
+			<!-- #1.0 : Basic modal -->
+			<div class="alert-modal">
+				<div class="alertContainer">
+						
+					<div class="alert-msg">
+						<center>
+							<h3> You have to agree to the TOC to continue.</h3>
+							<button class="close"> OK </button>
+						</center>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+<script type="text/javascript">
+	var modalTrigger =  document.getElementsByClassName("modal-trigger")[0];
+	var modal = document.getElementsByClassName("alert-modal")[0];
+	var modalContent = document.getElementsByClassName("alertContainer")[0];
+	var close = document.getElementsByClassName("close")[0];
+
+
+	modalTrigger.addEventListener("click", function(el){
+		modal.style.visibility = "visible";
+		modal.style.opacity = 1;
+	});
+
+	close.addEventListener("click", function(el){
+		modal.style.visibility = "hidden";
+		modal.style.opacity = 0;
+	});
+
+
+</script>
+</body>
+</html>

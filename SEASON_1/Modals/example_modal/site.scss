@@ -1,0 +1,29 @@
+@import "style.scss";
+
+html,body{
+	padding: 0;
+	margin: 0;
+	// background-color: #e0e5eb;
+	font-family: "Lato";
+}
+
+*{
+	box-sizing: border-box;
+}
+
+a{
+	color: #333;
+}
+
+.GY-container{
+
+	padding: 0 20px;
+
+	.GY-container-wrap{
+		max-width: 1200px;
+		width: 100%;
+		height: 100vh;
+		margin: 0 auto;
+	}
+	
+}
