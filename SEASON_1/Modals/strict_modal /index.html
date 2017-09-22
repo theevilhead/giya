@@ -24,6 +24,9 @@
 					<div class="alert-msg">
 						<center>
 							<h3> You have to agree to the TOC to continue.</h3>
+							<p>
+								Try clicking on the darker area.
+							</p>
 							<button class="close"> OK </button>
 						</center>
 					</div>
@@ -50,6 +53,19 @@
 		modal.style.visibility = "hidden";
 		modal.style.opacity = 0;
 	});
+
+	
+window.onclick = function (event){
+	if (event.target == modal) {
+		modal.style.visibility = "visible";
+		modalContent.classList.add("active");
+		window.setTimeout(function(){
+			modalContent.classList.remove("active");
+		},200);
+
+    }
+};
+
 
 
 </script>

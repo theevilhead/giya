@@ -3,8 +3,7 @@
     opacity: 0;
     position: fixed; 
     z-index: 1; 
-    padding-top: 100px; 
-    padding-left: 200px;
+    padding: 20px 30px;
     left: 0;
     top: 0;
     width: 100%; 
@@ -15,13 +14,15 @@
 
     .modalContainer{
         position: absolute;
+        display: inline-block;
         left: 0;
         right: 0;
+        padding: 10px;
+        min-height: 450px;
+        height: 50vh;
         margin: 0 auto;
         max-width: 900px;
         width: 100%;
-        height : 70%;
-        background-color: #fefefe;
 
         .modal-image{
             
@@ -87,3 +88,16 @@
     
 }
 
+@media screen and (max-width: 620px){
+
+    .modalContainer,.modal-image,.modal-text{
+        width: 100%!important;
+        float: none;
+        clear: both;
+    }
+
+    .modal-image{
+        max-height: 150px!important;  
+    }
+
+}
