@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Giyaletter : Image slider </title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title> Giyaletter : Sliding menu </title>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> -->
+	<link rel="stylesheet" type="text/css" href="style1.css">
+	<style type="text/css">
+
+		#i-slider{
+			margin: 50px auto;
+		}
+		
+	</style>
+</head>
+<body>
+
+<div class="GY-container">
+
+	<div id="i-slider">
+
+		<ul>
+			<li class="i-images active" style="background-image: url('img/2.jpeg');"></li>
+			<li class="i-images" style="background-image: url('img/1.jpeg');"></li>
+			<li class="i-images" style="background-image: url('img/3.jpeg');"></li>
+			<li class="i-images active" style="background-image: url('img/2.jpeg');"></li>
+			<li class="i-images" style="background-image: url('img/1.jpeg');"></li>
+			<li class="i-images" style="background-image: url('img/3.jpeg');"></li><li class="i-images active" style="background-image: url('img/2.jpeg');"></li>
+			<li class="i-images" style="background-image: url('img/1.jpeg');"></li>
+			<li class="i-images" style="background-image: url('img/3.jpeg');"></li>
+		</ul>
+
+		<div class="i-nav">
+			<span class="i-pre">  <img src="img/next.svg" width="20px"> </span>
+			<span class="i-next"> <img src="img/next.svg" width="20px">  </span>
+		</div>
+
+	</div>
+
+	<center><h2>Click on the arrows to change images</h2></center>
+
+
+</div>
+
+<center>
+	<div>Icons made by <a href="https://www.flaticon.com/authors/gregor-cresnar" title="Gregor Cresnar">Gregor Cresnar</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+</center>
+
+<script type="text/javascript">
+
+	var eles = document.getElementsByClassName('i-images');
+
+	var i = 0;
+
+	function change(i){
+
+		for(var j=0;j<eles.length;j++){
+			eles[j].classList.remove('active');
+		}
+
+		eles[i].classList.add('active');
+		
+	}
+
+	var pre  = document.getElementsByClassName('i-pre')[0];
+	var next = document.getElementsByClassName('i-next')[0];
+
+	pre.addEventListener("click", function(){
+		i = (i == 0) ? (i) : (i-1);
+		change(i);
+	})
+
+
+	next.addEventListener("click", function(){
+		i = (i == (eles.length-1)) ? (i) : (i+1);
+		change(i);
+	})
+
+
+
+</script>
+
+</body>
+</html>

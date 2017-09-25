@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Giyaletter : Image slider </title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title> Giyaletter : Sliding menu </title>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+
+		#i-slider{
+			margin: 50px auto;
+		}
+		
+	</style>
+</head>
+<body>
+
+<div class="GY-container">
+
+	<div id="i-slider">
+
+		<ul>
+			<li class="i-images active" style="background-image: url('img/2.jpeg');"></li>
+			<li class="i-images " style="background-image: url('img/1.jpeg');"></li>
+			<li class="i-images" style="background-image: url('img/3.jpeg');"></li>
+			<li class="i-images" style="background-image: url('img/4.jpeg');"></li>
+		</ul>
+
+		<div class="i-nav"></div>
+
+	</div>
+
+	<center><h2>Click on the circles to change images</h2></center>
+</div>
+
+
+<script type="text/javascript">
+
+	var eles = document.getElementsByClassName('i-images');
+
+	var i =0;
+
+	function change(ind){
+
+		if(ind != i)
+			{
+				eles[i].classList.remove('active');
+				eles[ind].classList.add('active');
+				i=ind;
+			}
+
+	}
+
+	var inav = document.getElementsByClassName('i-nav')[0];
+	var inav_string = '';
+
+	for(var j=0;j<(eles.length) ; j++){
+
+		if(j==0)
+			inav_string += '<span class="i-nav-button active" data-id="'+j+'"></span>';
+		else
+			inav_string += '<span class="i-nav-button" data-id="'+j+'"></span>';
+
+	}
+
+	inav.innerHTML = inav_string;
+
+	var inav_buttons = document.getElementsByClassName('i-nav-button');
+
+	for(k =0 ; k < inav_buttons.length;k++){
+
+		inav_buttons[k].addEventListener("click",function(e){
+
+		change(parseInt(e.target.getAttribute("data-id")))
+	
+		for(kk =0 ; kk < inav_buttons.length;kk++){
+
+			if(inav_buttons[kk].classList.contains('active')){
+				inav_buttons[kk].classList.remove('active');
+			}
+
+			if(!e.target.classList.contains('active')){
+				e.target.classList.add('active')
+			}
+		}
+
+		})
+		
+	}
+
+</script>
+
+</body>
+</html>
