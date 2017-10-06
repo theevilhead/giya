@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Giya : Accordions </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+
+<div class="container">
+
+	<div class="accordion">
+		<div class="link">Accordion 1</div>
+		<div class="content">
+			<div class="content-wrap">
+				Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the 	Renaissance.
+			</div>
+		</div>
+	</div>
+	<div class="accordion">
+		<div class="link">Accordion 1</div>
+		<div class="content">
+			<div class="content-wrap">
+				Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the 	Renaissance.
+			</div>
+		</div>
+	</div>
+	<div class="accordion">
+		<div class="link">Accordion 1</div>
+		<div class="content">
+			<div class="content-wrap">
+				Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the 	Renaissance.
+			</div>
+		</div>
+	</div>
+	<div class="accordion">
+		<div class="link">Accordion 1</div>
+		<div class="content">
+			<div class="content-wrap">
+				Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the 	Renaissance.
+			</div>
+		</div>
+	</div>
+
+
+</div>
+
+<script type="text/javascript">
+
+	var eles = document.getElementsByClassName('accordion');
+
+	for(var i=0;i<eles.length;i++){
+		eles[i].children[0].onclick = function(e){
+			c = e.target.parentElement.children[1];
+			console.log(c)
+			if(c.classList.contains("active")){
+				c.classList.remove("active");
+			}else{
+				c.classList.add("active");
+			}
+
+		}
+
+	}
+
+	
+</script>
+
+
+</body>
+</html>
